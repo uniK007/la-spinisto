@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Rye&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+/*Il Filatore(Italian) = The Spinner*/
+/*La Ŝpinisto(Esperanto) = The Spinner*/
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  height: 100vh;
+  background: linear-gradient(to right, rgb(101, 78, 163), rgb(234, 175, 200));
+}
