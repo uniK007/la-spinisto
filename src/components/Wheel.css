@@ -1,4 +1,4 @@
-.wheel-container{
+.wheel-container {
   margin: 40px auto 0;
   position: relative;
   width: 350px;
@@ -32,8 +32,8 @@
 }
 
 .wheel .section {
-  /*To make wheel as zigzag  and center as bolt type design make =>{ left: 13px; top: -55px; transform-origin: 162px 230px}*/ 
-  
+  /*To make wheel as zigzag  and center as bolt type design make =>{ left: 13px; top: -55px; transform-origin: 162px 230px}*/
+
   position: absolute;
   left: 40px;
   top: -54px;
@@ -43,7 +43,7 @@
   border-width: 230px 135px 0;
   border-color: #19c transparent;
   transform-origin: 135px 230px;
-  opacity: 1;
+  /* opacity: 1; */
 }
 
 .wheel .section:nth-child(1) {
@@ -89,8 +89,4 @@
   background: rgba(153, 182, 219, 0.5);
   border: 1px black;
   user-select: none;
-}
-
-.a1{
-  position: relative;
 }

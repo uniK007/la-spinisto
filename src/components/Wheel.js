@@ -33,6 +33,8 @@ const Wheel = () => {
       </div>
       {/*Inner transparent circle*/}
       <div id='circle'></div>
+      
+      <div id='pointer'></div>
 
     </div>
   )

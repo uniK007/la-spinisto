@@ -1,4 +1,4 @@
-import { Box } from '@mui/material';
+import { Grid } from '@mui/material';
 import './App.css';
 import Footer from './components/Footer';
 import Header from './components/Header';
@@ -7,11 +7,19 @@ import WheelContainer from './components/WheelContainer';
 function App() {
 
   return (
-    <Box sx={{display:'flex', justifyContent:'center', alignItems:'center', flexDirection:'column'}}>
+    <Grid container height='100vh'>
+
+      <Grid item xs={12} alignSelf='flex-start'>
         <Header />
-        <WheelContainer />
+      </Grid>
+
+      <WheelContainer />
+
+      <Grid item xs={12} alignSelf='flex-end'>
         <Footer />
-    </Box>
+      </Grid>
+
+    </Grid>
   );
 }
 

@@ -7,15 +7,15 @@ import Wheel from './Wheel';
 const WheelContainer = () => {
 
   return (
-    <Grid container justifyContent='space-around' alignItems='center'>
+    <Grid container justifyContent='space-around' alignItems='center' mt={2} mb={2}>
 
       <Grid item>
-        <Stack spacing={4} sx={{ alignItems: 'center',}}>
+        <Stack spacing={4} alignItems='center'>
           <Wheel />
           <Button
             variant='contained'
             startIcon={<AllOutIcon />}
-            sx={{ background:'linear-gradient(to right, rgb(15, 12, 41), rgb(48, 43, 99), rgb(36, 36, 62))'}}>Spin</Button>
+            sx={{ background: 'linear-gradient(to right, rgb(15, 12, 41), rgb(48, 43, 99), rgb(36, 36, 62))' }}>Spin</Button>
         </Stack>
       </Grid>
 
