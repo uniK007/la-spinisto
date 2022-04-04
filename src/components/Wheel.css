@@ -90,3 +90,16 @@
   border: 1px black;
   user-select: none;
 }
+
+#pointer{
+  position: relative;
+  top: -350px;
+  left: 162px;
+  content: "";
+  transform: rotateX(-180deg);
+  width: 10px;
+  height: 10px;
+  border-style: solid;
+  border-color: rgba(15, 58, 87, 0.979) transparent;
+  border-width: 0px 15px 29px;
+}
