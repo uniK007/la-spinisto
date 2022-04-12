@@ -43,7 +43,7 @@
   border-width: 230px 135px 0;
   border-color: #19c transparent;
   transform-origin: 135px 230px;
-  /* opacity: 1; */
+  opacity: 1;
 }
 
 .wheel .section:nth-child(1) {
@@ -74,6 +74,15 @@
 .wheel .section:nth-child(6) {
   transform: rotate(360deg);
   border-color: #4592af transparent;
+}
+
+.wheel .section .amount{
+  display: block;
+  position: relative;
+  margin: -100px;
+  font-weight: bold;
+  text-align: center;
+  color: darkslateblue;
 }
 
 #circle {

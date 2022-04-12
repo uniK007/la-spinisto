@@ -9,27 +9,27 @@ const Wheel = () => {
         <div className='inner-wheel'>
 
           <div className='section'>
-            {/* <span className='a1'>$100</span> */}
+            <span className='amount'>Retry</span>
           </div>
 
           <div className='section'>
-            {/* <span className='2'></span> */}
+            <span className='amount'>$100</span>
           </div>
 
           <div className='section'>
-            {/* <span classNameName='3'></span> */}
+            <span className='amount'>Try again!!</span>
           </div>
 
           <div className='section'>
-            {/* <span classNameName='4'></span> */}
+            <span className='amount'>$1000</span>
           </div>
 
           <div className='section'>
-            {/* <span classNameName='5'></span> */}
+            <span className='amount'>oops!</span>
           </div>
 
           <div className='section'>
-            {/* <span classNameName='6'></span> */}
+            <span className='amount'>$500</span>
           </div>
 
         </div>
