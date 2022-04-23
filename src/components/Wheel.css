@@ -43,7 +43,7 @@
   border-width: 230px 135px 0;
   border-color: #19c transparent;
   transform-origin: 135px 230px;
-  opacity: 1;
+  /* opacity: 1; */
 }
 
 .wheel .section:nth-child(1) {
@@ -104,7 +104,6 @@
   position: relative;
   top: -350px;
   left: 162px;
-  content: "";
   transform: rotateX(-180deg);
   width: 10px;
   height: 10px;

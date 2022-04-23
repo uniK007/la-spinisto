@@ -1,11 +1,11 @@
 import React from 'react'
 import "./Wheel.css";
 
-const Wheel = () => {
+const Wheel = ({spinClickHandler}) => {
   return (
     <div className='wheel-container'>
 
-      <div className='wheel'>
+      <div className='wheel' onClick={spinClickHandler}>
         <div className='inner-wheel'>
 
           <div className='section'>

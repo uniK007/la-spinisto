@@ -1,14 +1,14 @@
 import React from 'react';
-import { Button, Grid, Stack } from '@mui/material';
+import { Grid, Stack } from '@mui/material';
 import BetCard from './BetCard';
-import AllOutIcon from '@mui/icons-material/AllOut';
 import Wheel from './Wheel';
 import './Wheel.css';
+import SpinButton from './SpinButton';
 
 const WheelContainer = () => {
 
   const spinClickHandler = () => {
-    let spinButton = document.getElementsByClassName('.spinButton')
+    let spinButton = document.getElementsByClassName('spinButton')
     let wheel = document.querySelector('.wheel')
 
     spinButton.addEventListener('click', () => {
@@ -24,19 +24,12 @@ const WheelContainer = () => {
   }
 
   return (
-    <Grid container justifyContent='space-around' alignItems='center' mt={2} mb={2}>
+    <Grid container justifyContent='space-around' alignItems='center' mb={2}>
 
       <Grid item>
         <Stack spacing={2} alignItems='center'>
-          <Wheel />
-          <Button
-            className='spinButton'
-            onClick={spinClickHandler}
-            variant='contained'
-            startIcon={<AllOutIcon />}
-            sx={{ background: 'linear-gradient(to right, rgb(15, 12, 41), rgb(48, 43, 99), rgb(36, 36, 62))' }}>
-            Spin
-          </Button>
+          <Wheel spinClickHandler={spinClickHandler}/>
+          <SpinButton spinClickHandler={spinClickHandler}/>
         </Stack>
       </Grid>
 
