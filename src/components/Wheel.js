@@ -5,7 +5,7 @@ const Wheel = React.forwardRef((props, ref) => {
 
   useImperativeHandle(ref, () => ({
     spin() {
-      let wheel = document.querySelector('.wheel')
+      let wheel = document.querySelector('.inner-wheel')
       let degrees = Math.floor(3600 + Math.random() * 3600)
       wheel.style.transition = 'all 10s ease-out'
       wheel.style.transform = `rotate(${degrees}deg)`
