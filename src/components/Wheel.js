@@ -1,11 +1,21 @@
-import React from 'react'
+import React, { useImperativeHandle } from 'react'
 import "./Wheel.css";
 
-const Wheel = ({spinClickHandler}) => {
+const Wheel = React.forwardRef((props, ref) => {
+
+  useImperativeHandle(ref, () => ({
+    spin() {
+      let wheel = document.querySelector('.wheel')
+      let degrees = Math.floor(3600 + Math.random() * 3600)
+      wheel.style.transition = 'all 10s ease-out'
+      wheel.style.transform = `rotate(${degrees}deg)`
+    }
+  }))
+
   return (
     <div className='wheel-container'>
 
-      <div className='wheel' onClick={spinClickHandler}>
+      <div className='wheel'>
         <div className='inner-wheel'>
 
           <div className='section'>
@@ -40,6 +50,6 @@ const Wheel = ({spinClickHandler}) => {
       <div id='pointer'></div>
     </div>
   )
-}
+})
 
 export default Wheel

@@ -5,11 +5,11 @@
 }
 
 .wheel {
+  position: relative;
+  overflow: hidden;
   height: 350px;
   width: 350px;
   border-radius: 50%;
-  position: relative;
-  overflow: hidden;
   border-radius: 8px solid white;
   box-shadow: rgba(0, 0, 0, 0.2) 0 0 10px, rgba(0, 0, 0, 0.05) 0 3px 0;
   transform: rotate(0deg);

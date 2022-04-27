@@ -1,26 +1,25 @@
-import React from 'react';
-import { Grid, Stack } from '@mui/material';
+import React, { useRef } from 'react';
+import { Button, Grid, Stack } from '@mui/material';
+import AllOutIcon from '@mui/icons-material/AllOut';
 import BetCard from './BetCard';
 import Wheel from './Wheel';
-import './Wheel.css';
-import SpinButton from './SpinButton';
+// import './Wheel.css';
 
 const WheelContainer = () => {
 
-  const spinClickHandler = () => {
-    let spinButton = document.getElementsByClassName('spinButton')
-    let wheel = document.querySelector('.wheel')
+  const wheelRef = useRef()
+  // const spinClickHandler = () => {
+  //   let spinButton = document.getElementsByClassName('spinButton')
+  //   let wheel = document.querySelector('.wheel')
 
-    spinButton.addEventListener('click', () => {
-      let degrees = Math.floor(360 + Math.random() * 360)
-      wheel.style.transition = 'all 10s ease-out'
-      wheel.style.transform = `rotate(${degrees}deg)`
-    })
+  //   wheel.addEventListener('transitioned', () => {
+  //     spinButton.style.pointerEvents = 'auto';
+  //     wheel.style.transition = 'none'
+  //   })
+  // }
 
-    wheel.addEventListener('transitioned', () => {
-      spinButton.style.pointerEvents = 'auto';
-      wheel.style.transition = 'none'
-    })
+  const spinHandler = () => {
+    wheelRef.current.spin()
   }
 
   return (
@@ -28,8 +27,15 @@ const WheelContainer = () => {
 
       <Grid item>
         <Stack spacing={2} alignItems='center'>
-          <Wheel spinClickHandler={spinClickHandler}/>
-          <SpinButton spinClickHandler={spinClickHandler}/>
+          <Wheel ref={wheelRef} />
+          <Button
+            onClick={spinHandler}
+            variant='contained'
+            startIcon={<AllOutIcon />}
+            sx={{ background: 'linear-gradient(to right, rgb(15, 12, 41), rgb(48, 43, 99), rgb(36, 36, 62))' }}>
+            Spin
+          </Button>
+          {/* <SpinButton /> */}
         </Stack>
       </Grid>
 
