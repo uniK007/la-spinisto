@@ -2,7 +2,6 @@
   margin: 40px auto 0;
   position: relative;
   width: 350px;
-  border-radius: 50%;
 }
 
 .wheel {
@@ -98,7 +97,6 @@
   z-index: 1000;
   background: rgba(153, 182, 219, 0.5);
   border: 1px black;
-  user-select: none;
 }
 
 #pointer{

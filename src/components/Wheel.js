@@ -7,7 +7,7 @@ const Wheel = React.forwardRef((props, ref) => {
     spin() {
       let wheel = document.querySelector('.inner-wheel')
       let degrees = Math.floor(3600 + Math.random() * 3600)
-      wheel.style.transition = 'all 10s ease-out'
+      wheel.style.transition = 'all 5s ease-out'
       wheel.style.transform = `rotate(${degrees}deg)`
     }
   }))
@@ -16,6 +16,7 @@ const Wheel = React.forwardRef((props, ref) => {
     <div className='wheel-container'>
 
       <div className='wheel'>
+        {/* div required otherwise page will be unresponsive for various screen sizes on spinnig the wheel*/}
         <div className='inner-wheel'>
 
           <div className='section'>

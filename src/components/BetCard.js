@@ -83,9 +83,9 @@ const BetCard = () => {
                     Your Bet
                 </Typography>
 
-                <br/>
-                
-                <Typography
+                <br/> */}
+
+                {/* <Typography
                     variant='h6'
                     component='p'
                     fontFamily="'Bebas Neue', cursive"
