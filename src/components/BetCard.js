@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Typography, Stack, ButtonGroup, Button, Box, createTheme, ThemeProvider } from "@mui/material";
 import PaidIcon from '@mui/icons-material/Paid';
 import "./BetCard.css";
@@ -14,6 +14,18 @@ const theme = createTheme({
 const BetCard = () => {
 
     const [credit, setCredit] = useState(10000);
+    const [bet, setBet] = useState(0);
+
+    const prevBetRef = useRef(credit)
+
+    useEffect(() => {
+        let betScore = prevBetRef.current - credit
+        setBet(betScore)
+
+        if (credit <= 0) {
+            setCredit(0)
+        }
+    }, [credit])
 
     const betHundred = () => {
         setCredit(prevCredit => prevCredit - 100)
@@ -36,7 +48,7 @@ const BetCard = () => {
                         variant='text'
                         disableRipple={true}
                     >
-                        You have Credit : <PaidIcon />{(credit <= 0) ? 0 : credit}
+                        You have Credit : <PaidIcon />{credit}
                     </Button>
                 </ThemeProvider>
 
@@ -73,7 +85,7 @@ const BetCard = () => {
                     </Button>
                 </ButtonGroup>
 
-                {/* <Typography
+                <Typography
                     variant='h6'
                     component='p'
                     fontFamily="'Bebas Neue', cursive"
@@ -83,17 +95,17 @@ const BetCard = () => {
                     Your Bet
                 </Typography>
 
-                <br/> */}
-
-                {/* <Typography
+                <Typography
                     variant='h6'
                     component='p'
                     fontFamily="'Bebas Neue', cursive"
                     letterSpacing='0.2rem'
-                    alignSelf='center'
+                    fontSize='2rem'
+                    textAlign='center'
+                    color='#086972'
                 >
-                    You Won
-                </Typography> */}
+                    {bet}
+                </Typography>
 
             </Stack>
         </Box>
